@@ -12,5 +12,16 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "art-gallary-app"
+rootProject.name = "art-gallery-app"
 include ':app'
+project(':app').projectDir = new File(rootDir, 'app')
+
+include ':core'
+project(':core').projectDir = new File(rootDir, 'core')
+
+include ':feature_picture_details'
+project(':feature_picture_details').projectDir = new File(rootDir, 'feature_picture_details')
+
+include ':feature_picture_categories'
+project(':feature_picture_categories').projectDir = new File(rootDir, 'feature_picture_categories')
+
